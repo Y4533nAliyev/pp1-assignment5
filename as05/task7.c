@@ -38,5 +38,33 @@ void printArray(int arr[], int len)
 	printf("\n");
 }
 
-// You fill in here
+void zeroComesFirst(int arr[], int len) {
+  // check if the array has zeros
+  int hasZero = 0;
+  for (int i = 0; i < len; i++) {
+      if (arr[i]== 0) {
+          hasZero = 1;
+          break;
+      }
+  }
+  
+  // if there are no zeros, return the array
+  if (!hasZero) {
+      return;
+  }
+
+  int index = len - 1;
+
+  // move non-zeros to the right side
+  for (int i = len - 1; i >= 0; i--) {
+      if (arr[i] != 0) {
+        arr[index--] = arr[i];
+     }
+  }
+
+  // put zeros at the front 
+  while (index >= 0) {
+      arr[index--] = 0;
+  }
+}
 

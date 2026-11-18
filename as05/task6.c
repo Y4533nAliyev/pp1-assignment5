@@ -27,5 +27,18 @@ int main()
    return 0;
 }
 
-// You fill in here
+BOOL isOnly916(int arr[], int len){
+  int isFalse = 0;
+  for(int i =0; i < len; i++){
+    if(arr[i] == 1 || arr[i] == 6 || arr[i] == 9){
+    }else{
+      isFalse += 1;
+    }
+  }
+  if(isFalse >= 1){
+    return false;
+  }else{
+    return true;
+  }
+}
 
