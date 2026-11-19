@@ -22,6 +22,28 @@ int main()
 	return 0;
 }
 
-
 // You fill in here
+int middleAverage(int arr[], int len) {
+  // check if it's length is bigger or equal to 3
+  if (len <= 2) {
+      return 0; 
+  }
+  
+  int min = arr[0];
+  int max = arr[0];
+  int sum = arr[0];
 
+  // find the sum, minimum, and maximum
+  for (int i = 1; i < len; i++) {
+      sum += arr[i];
+      if (arr[i] < min) {
+          min = arr[i];
+      }
+      if (arr[i] > max) {
+          max = arr[i];
+      }
+  }
+  // fint the sum without the min and the max included 
+  sum = sum - min - max;
+  return sum / (len - 2);
+}
