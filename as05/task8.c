@@ -35,13 +35,13 @@ int middleAverage(int arr[], int len) {
 
   // find the sum, minimum, and maximum
   for (int i = 1; i < len; i++) {
-      sum += arr[i];
-      if (arr[i] < min) {
-          min = arr[i];
-      }
-      if (arr[i] > max) {
-          max = arr[i];
-      }
+    sum += arr[i];
+    if (arr[i] < min) {
+       min = arr[i];
+    }
+    if (arr[i] > max) {
+    max = arr[i];
+    }
   }
   // fint the sum without the min and the max included 
   sum = sum - min - max;

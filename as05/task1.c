@@ -9,7 +9,7 @@ typedef char BOOL;
 /* function prototypes are here */
 BOOL isEven(int num);
 
-int main ()
+int main()
 {
 	/* You shouldnt need to do any logic in main function. 
 	 * Your function must satisfy ALL possible test cases below. 
@@ -26,9 +26,9 @@ int main ()
 }
 
 BOOL isEven(int num){
-  if(num % 2 == 1 || num % 2 == -1){
-    return false;
-  }else{
+  if(num % 2 == 0){
     return true;
+  }else{
+    return false;
   }
 }

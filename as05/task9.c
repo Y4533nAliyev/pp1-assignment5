@@ -40,20 +40,20 @@ void printArray(int arr[], int len)
 // You fill in here
 void order49(int arr[], int len) {
     for (int i = 0; i < len; i++) {
-        // Find a 4 that is not immediately followed by a 9
-        if (arr[i] == 4 && arr[i + 1] != 9) {
-            int j = 0;
-            // Search for a 9 that is not already immediately following a 4
-            while (j < len) {
-                if (arr[j] == 9 && (j == 0 || arr[j - 1] != 4)) {
-                    break;
-                }
-                j++;
-            }
-            // Swap the element immediately after 4 with the found 9
-            int temp = arr[i + 1];
-            arr[i + 1] = arr[j];
-            arr[j] = temp;
-        }
-    }
+    // find a 4 that is not immediately followed by a 9
+    if (arr[i] == 4 && arr[i + 1] != 9) {
+      int j = 0;
+      // search for a 9 that is not already immediately following a 4
+      while (j < len) {
+          if (arr[j] == 9 && (j == 0 || arr[j - 1] != 4)) {
+              break;
+          }
+          j++;
+      }
+      // swap the element immediately after 4 with the found 9
+      int temp = arr[i + 1];
+      arr[i + 1] = arr[j];
+      arr[j] = temp;
+  }
+ }
 }

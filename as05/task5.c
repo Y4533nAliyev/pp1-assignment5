@@ -18,7 +18,7 @@ int main ()
 void birthdayinfo(int bday){
   int year = bday / 10000;
   int monthDay = bday % 10000;
-  if(year % 4 == 0){
+  if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
     printf("Leap Year. Zodiac is ");
   }else{
     printf("Not Leap Year. Zodiac is ");
